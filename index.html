@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Futsal Booking Premium</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="app">
+
+<!-- BOOKING -->
+<div id="pageBooking" class="page">
+
+<h2 class="font-bold text-lg mb-2">⚽ Booking</h2>
+
+<div class="card mb-2">
+<input id="nama" placeholder="Nama" class="w-full p-2 border rounded mb-2">
+<input id="tanggal" type="date" class="w-full p-2 border rounded">
+</div>
+
+<div class="card mb-2">
+<div id="jamGrid" class="grid grid-cols-3 gap-2"></div>
+</div>
+
+<div class="card flex justify-between mb-2">
+<div id="total">Rp0</div>
+<button onclick="clearSelect()" class="text-red-500">Reset</button>
+</div>
+
+<button onclick="openPopup()" class="w-full bg-blue-600 text-white p-3 rounded">
+Bayar Sekarang
+</button>
+
+</div>
+
+<!-- RIWAYAT -->
+<div id="pageSaya" class="page no-scroll">
+
+<h2 class="font-bold mb-2">📋 Booking Saya</h2>
+
+<div class="card mb-2">
+<input id="searchNama" placeholder="🔍 Cari nama..." class="w-full p-2 border rounded mb-2">
+<input type="date" id="filterTanggal" class="w-full p-2 border rounded mb-2">
+</div>
+
+<div class="card">
+<div id="myBooking"></div>
+</div>
+
+</div>
+
+</div>
+
+<!-- NAV -->
+<div class="nav">
+<button onclick="goPage(0)">🏠 Booking</button>
+<button onclick="goPage(1)">📋 Saya</button>
+</div>
+
+<!-- POPUP -->
+<div id="popupBayar" class="popup">
+<div class="card w-80 text-center popup-box">
+<div id="popupTotal"></div>
+
+<button onclick="prosesBayar('dp')" class="w-full bg-red-500 text-white p-3 rounded mb-2">
+💰 DP
+</button>
+
+<button onclick="prosesBayar('paid')" class="w-full bg-green-600 text-white p-3 rounded mb-2">
+✅ Lunas
+</button>
+
+<button onclick="closePopupBayar()" class="w-full bg-gray-200 p-2 rounded">
+Batal
+</button>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
