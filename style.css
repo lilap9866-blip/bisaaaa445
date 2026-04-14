@@ -75,6 +75,6 @@ body{
 .btn-lunasi {
   width: 30%;        /* ubah ini kalau mau (contoh: 80%, 200px) */
   padding: 50px 100;     /* tinggi tombol (atas bawah) */
-  font-size: 20px;    /* ukuran teks */
+  font-size: 18px;    /* ukuran teks */
   border-radius: 10px; /* sudut */
 }
