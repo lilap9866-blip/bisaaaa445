@@ -256,7 +256,13 @@ async function renderMyBooking(){
     let btn = "";
 
     if(b.status === "dp"){
-      btn = `<button onclick="lunasiBookingDB('${b.nama}','${b.tanggal}','${b.jam}')" class="text-green-600">Lunasi</button>`;
+     // btn = `<button onclick="lunasiBookingDB('${b.nama}','${b.tanggal}','${b.jam}')" class="text-green-600">Lunasi</button>`;
+      btn = `
+<button onclick="lunasiBookingDB('${b.nama}','${b.tanggal}','${b.jam}')"
+class="btn-lunasi bg-blue-600 hover:bg-blue-700 text-white mt-1.5">
+  Lunasi
+</button>
+`;
     }
 
     return `
