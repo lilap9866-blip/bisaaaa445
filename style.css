@@ -63,3 +63,10 @@ body{
 .popup.show{
   display:flex;
 }
+
+
+
+.dp{
+  background:#dc2626; /* 🔥 sama seperti merah */
+  color:#fff;
+}
