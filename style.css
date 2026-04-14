@@ -70,3 +70,11 @@ body{
   background:#dc2626; /* 🔥 sama seperti merah */
   color:#fff;
 }
+
+
+.btn-lunasi {
+  width: 15%;        /* ubah ini kalau mau (contoh: 80%, 200px) */
+  padding: 50px 100;     /* tinggi tombol (atas bawah) */
+  font-size: 15px;    /* ukuran teks */
+  border-radius: 10px; /* sudut */
+}
